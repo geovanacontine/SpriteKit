@@ -21,6 +21,9 @@ class BaseEntity: GKEntity {
         
         let position = PositionComponent(position: initialPosition)
         addComponent(position)
+        
+        let orientation = OrientationComponent()
+        addComponent(orientation)
     }
     
     required init?(coder: NSCoder) {

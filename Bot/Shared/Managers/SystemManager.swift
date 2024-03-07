@@ -11,7 +11,8 @@ struct SystemManager {
     
     private let systems: [GKSystem] = [
         MovementSystem(),
-        RenderSystem()
+        RenderSystem(),
+        AnimationSystem()
     ]
     
     func update(entityManager: EntityManager, deltaTime: TimeInterval) {

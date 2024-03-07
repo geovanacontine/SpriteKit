@@ -17,8 +17,12 @@ struct RenderSystem: GKSystem {
     func update(entityManager: EntityManager, deltaTime: TimeInterval) {
         for entity in entityManager.entities(with: requiredComponents) {
             let node = entity.component(ofType: RenderComponent.self)?.node
+            
             let pos = entity.component(ofType: PositionComponent.self)?.position
             node?.position = pos ?? .zero
+            
+            let orientation = entity.component(ofType: OrientationComponent.self)?.type
+            node?.xScale = orientation == .right ? 1 : -1
         }
     }
 }

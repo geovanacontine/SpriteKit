@@ -16,6 +16,13 @@
 		01B02A3E2B99F9C400F132CF /* RenderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B02A3D2B99F9C400F132CF /* RenderComponent.swift */; };
 		01B02A402B99FCAC00F132CF /* BaseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B02A3F2B99FCAC00F132CF /* BaseEntity.swift */; };
 		01B02A422B9A0ADE00F132CF /* MovementSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B02A412B9A0ADE00F132CF /* MovementSystem.swift */; };
+		01B02A442B9A23E700F132CF /* WalkComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B02A432B9A23E700F132CF /* WalkComponent.swift */; };
+		01B02A462B9A24FC00F132CF /* ControllableComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B02A452B9A24FC00F132CF /* ControllableComponent.swift */; };
+		01B02A482B9A25E600F132CF /* AnimationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B02A472B9A25E600F132CF /* AnimationSystem.swift */; };
+		01B02A4A2B9A260900F132CF /* AnimatableComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B02A492B9A260900F132CF /* AnimatableComponent.swift */; };
+		01B02A4D2B9A301C00F132CF /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B02A4C2B9A301C00F132CF /* Animation.swift */; };
+		01B02A4F2B9A329200F132CF /* AnimationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B02A4E2B9A329200F132CF /* AnimationType.swift */; };
+		01B02A512B9A33C500F132CF /* OrientationComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B02A502B9A33C500F132CF /* OrientationComponent.swift */; };
 		01CE4EF92B99374200EDA0B1 /* GKEntity+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CE4EF82B99374200EDA0B1 /* GKEntity+Extension.swift */; };
 		01CE4EFB2B99377D00EDA0B1 /* SystemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CE4EFA2B99377D00EDA0B1 /* SystemManager.swift */; };
 		01CE4EFE2B9937CF00EDA0B1 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CE4EFD2B9937CF00EDA0B1 /* GameScene.swift */; };
@@ -41,6 +48,13 @@
 		01B02A3D2B99F9C400F132CF /* RenderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderComponent.swift; sourceTree = "<group>"; };
 		01B02A3F2B99FCAC00F132CF /* BaseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEntity.swift; sourceTree = "<group>"; };
 		01B02A412B9A0ADE00F132CF /* MovementSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementSystem.swift; sourceTree = "<group>"; };
+		01B02A432B9A23E700F132CF /* WalkComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkComponent.swift; sourceTree = "<group>"; };
+		01B02A452B9A24FC00F132CF /* ControllableComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllableComponent.swift; sourceTree = "<group>"; };
+		01B02A472B9A25E600F132CF /* AnimationSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationSystem.swift; sourceTree = "<group>"; };
+		01B02A492B9A260900F132CF /* AnimatableComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableComponent.swift; sourceTree = "<group>"; };
+		01B02A4C2B9A301C00F132CF /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		01B02A4E2B9A329200F132CF /* AnimationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationType.swift; sourceTree = "<group>"; };
+		01B02A502B9A33C500F132CF /* OrientationComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationComponent.swift; sourceTree = "<group>"; };
 		01CE4EF82B99374200EDA0B1 /* GKEntity+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GKEntity+Extension.swift"; sourceTree = "<group>"; };
 		01CE4EFA2B99377D00EDA0B1 /* SystemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemManager.swift; sourceTree = "<group>"; };
 		01CE4EFD2B9937CF00EDA0B1 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -80,6 +94,15 @@
 			path = Input;
 			sourceTree = "<group>";
 		};
+		01B02A4B2B9A300F00F132CF /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				01B02A4C2B9A301C00F132CF /* Animation.swift */,
+				01B02A4E2B9A329200F132CF /* AnimationType.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
 		01CE4EF72B99373600EDA0B1 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,8 +117,8 @@
 		01CE4EFC2B99379A00EDA0B1 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				01CE4EFA2B99377D00EDA0B1 /* SystemManager.swift */,
 				01CE4EFF2B993AF800EDA0B1 /* EntityManager.swift */,
+				01CE4EFA2B99377D00EDA0B1 /* SystemManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -162,6 +185,7 @@
 		01EA73882B98B8FC00CA8A96 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				01B02A4B2B9A300F00F132CF /* Animations */,
 				01EA738D2B98B96100CA8A96 /* GameScene.sks */,
 				01EA737B2B98B8CD00CA8A96 /* Assets.xcassets */,
 			);
@@ -173,6 +197,10 @@
 			children = (
 				01B02A3D2B99F9C400F132CF /* RenderComponent.swift */,
 				01EA73912B9926C700CA8A96 /* PositionComponent.swift */,
+				01B02A502B9A33C500F132CF /* OrientationComponent.swift */,
+				01B02A432B9A23E700F132CF /* WalkComponent.swift */,
+				01B02A492B9A260900F132CF /* AnimatableComponent.swift */,
+				01B02A452B9A24FC00F132CF /* ControllableComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -191,6 +219,7 @@
 			children = (
 				01EA73932B99278000CA8A96 /* RenderSystem.swift */,
 				01B02A412B9A0ADE00F132CF /* MovementSystem.swift */,
+				01B02A472B9A25E600F132CF /* AnimationSystem.swift */,
 			);
 			path = Systems;
 			sourceTree = "<group>";
@@ -274,19 +303,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01B02A4A2B9A260900F132CF /* AnimatableComponent.swift in Sources */,
 				01B02A382B99EAD000F132CF /* KeyboardInput.swift in Sources */,
+				01B02A512B9A33C500F132CF /* OrientationComponent.swift in Sources */,
 				01B02A402B99FCAC00F132CF /* BaseEntity.swift in Sources */,
 				01B02A342B99EA9500F132CF /* InputDevice.swift in Sources */,
 				01B02A2D2B99E05A00F132CF /* InputManager.swift in Sources */,
 				01CE4F002B993AF800EDA0B1 /* EntityManager.swift in Sources */,
 				01CE4EF92B99374200EDA0B1 /* GKEntity+Extension.swift in Sources */,
+				01B02A462B9A24FC00F132CF /* ControllableComponent.swift in Sources */,
 				01EA73942B99278000CA8A96 /* RenderSystem.swift in Sources */,
 				01B02A3A2B99F89600F132CF /* InputElement.swift in Sources */,
+				01B02A4D2B9A301C00F132CF /* Animation.swift in Sources */,
+				01B02A442B9A23E700F132CF /* WalkComponent.swift in Sources */,
 				01EA73902B99263A00CA8A96 /* Zombie.swift in Sources */,
+				01B02A482B9A25E600F132CF /* AnimationSystem.swift in Sources */,
 				01CE4EFE2B9937CF00EDA0B1 /* GameScene.swift in Sources */,
 				01EA737A2B98B8CC00CA8A96 /* GameSceneView.swift in Sources */,
 				01EA73922B9926C700CA8A96 /* PositionComponent.swift in Sources */,
 				01B02A322B99E91100F132CF /* BaseScene.swift in Sources */,
+				01B02A4F2B9A329200F132CF /* AnimationType.swift in Sources */,
 				01B02A422B9A0ADE00F132CF /* MovementSystem.swift in Sources */,
 				01CE4EFB2B99377D00EDA0B1 /* SystemManager.swift in Sources */,
 				01EA73962B99281F00CA8A96 /* GKSystem.swift in Sources */,

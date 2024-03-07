@@ -11,12 +11,10 @@ class GameScene: BaseScene {
     override func didMove(to view: SKView) {
         super.didMove(to: view)
         
-        let player = Player(
-            assetName: "player_idle_1",
-            size: .init(width: 128, height: 128),
-            initialPosition: .zero
-        )
+        let player = Player(initialPosition: .zero)
+        let zombie = Zombie(initialPosition: .init(x: 0, y: 100))
         
         entityManager.spawn(player)
+        entityManager.spawn(zombie)
     }
 }
